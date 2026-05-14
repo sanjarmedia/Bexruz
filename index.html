@@ -458,6 +458,13 @@ function reveal(){
 }
 
 function openInvite(){
+  // Play music immediately on user interaction
+  const music = document.getElementById('bg-music');
+  if (music) {
+    music.volume = 0.2;
+    music.play().catch(e => console.log("Audio play blocked", e));
+  }
+
   const ls=document.getElementById('lockscreen');
   ls.classList.add('out');
   setTimeout(()=>{
@@ -468,13 +475,6 @@ function openInvite(){
     updateCountdown();
     cdTimer=setInterval(updateCountdown,1000);
     setTimeout(reveal,150);
-    
-    // Play music
-    const music = document.getElementById('bg-music');
-    if (music) {
-      music.volume = 0.2;
-      music.play().catch(e => console.log("Audio play blocked", e));
-    }
   },1350);
 }
 
