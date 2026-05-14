@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bexruz & Sabina — To'y Taklifnomasi</title>
+<meta name="description" content="Bexruz va Sabinaning to'y taklifnomasi — 20 Iyun 2026, Shanba, 18:00">
+<meta property="og:title" content="Bexruz & Sabina — To'y Taklifnomasi">
+<meta property="og:description" content="20 Iyun 2026, Shanba, 18:00 — Zuhriniso to'yxonasi">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Raleway:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;min-height:100%}
+.wr{font-family:'Raleway',sans-serif;background:#080808;color:#f0e6d0;min-height:100vh;overflow-x:hidden}
+
+/* ── LOCK SCREEN ── */
+.ls{position:relative;min-height:100vh;background:radial-gradient(ellipse at 50% 30%,#1a0f00 0%,#000 65%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity 1.2s ease,transform 1.2s ease,filter 1.2s ease}
+.ls.out{opacity:0;transform:scale(1.06);filter:blur(14px);pointer-events:none}
+.lp{position:absolute;inset:0;pointer-events:none}
+.lp::before,.lp::after{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(180,140,60,.09) 0%,transparent 70%);animation:dA 9s ease-in-out infinite alternate}
+.lp::before{top:-200px;left:-200px}.lp::after{bottom:-200px;right:-200px;animation-name:dB;animation-duration:12s}
+@keyframes dA{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.2)}}
+@keyframes dB{from{transform:translate(0,0) scale(1.1)}to{transform:translate(-50px,-30px) scale(.9)}}
+.lctrl{position:absolute;top:1.4rem;right:1.4rem;display:flex;align-items:center;gap:.7rem;z-index:10}
+.cbtn{width:42px;height:42px;border-radius:50%;border:1px solid rgba(180,140,60,.3);background:rgba(180,140,60,.06);backdrop-filter:blur(12px);color:#c8a96e;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transition:all .3s}
+.cbtn:hover{border-color:rgba(180,140,60,.7);background:rgba(180,140,60,.14)}
+.ltg{display:flex;border-radius:2rem;border:1px solid rgba(180,140,60,.3);overflow:hidden;backdrop-filter:blur(12px);background:rgba(180,140,60,.04)}
+.lbtn{padding:.45rem 1rem;font-size:.72rem;letter-spacing:.1em;font-family:'Raleway',sans-serif;font-weight:300;background:none;border:none;color:rgba(200,169,110,.5);cursor:pointer;transition:all .3s}
+.lbtn.on{background:rgba(180,140,60,.22);color:#c8a96e}
+.lc{text-align:center;padding:2rem;animation:fU 1.2s ease both}
+@keyframes fU{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.lline{width:1px;height:80px;background:linear-gradient(to bottom,transparent,rgba(180,140,60,.6),transparent);margin:0 auto 1.5rem;animation:lG 1.4s ease both .3s}
+@keyframes lG{from{height:0;opacity:0}to{height:80px;opacity:1}}
+.lgem{width:10px;height:10px;border-radius:50%;background:#c8a96e;margin:0 auto 2.5rem;box-shadow:0 0 16px rgba(200,169,110,.5);animation:pls 2.5s ease-in-out infinite}
+@keyframes pls{0%,100%{box-shadow:0 0 12px rgba(200,169,110,.4)}50%{box-shadow:0 0 28px rgba(200,169,110,.8)}}
+.ltitle{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,5vw,2.8rem);font-weight:300;letter-spacing:.12em;line-height:1.3;color:#f0e6d0;margin-bottom:2.5rem;animation:fU 1.2s ease both .4s}
+.lockbtn{width:110px;height:110px;border-radius:50%;border:1px solid rgba(200,169,110,.35);background:rgba(200,169,110,.05);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;font-size:2.5rem;cursor:pointer;margin:0 auto;transition:transform .3s,box-shadow .3s,border-color .3s;animation:fU 1.2s ease both .6s,spinGlow 4s linear infinite}
+@keyframes spinGlow{0%,100%{box-shadow:0 0 30px rgba(200,169,110,.1),inset 0 0 30px rgba(200,169,110,.04)}50%{box-shadow:0 0 50px rgba(200,169,110,.22),inset 0 0 30px rgba(200,169,110,.04)}}
+.lockbtn:hover{transform:scale(1.08);border-color:rgba(200,169,110,.7)}.lockbtn:active{transform:scale(.94)}
+.lhint{margin-top:1.5rem;color:rgba(200,169,110,.45);font-size:.75rem;letter-spacing:.15em;animation:fU 1.2s ease both 1s}
+
+/* ── MAIN ── */
+.mc{opacity:0;transform:translateY(18px);transition:opacity 1s ease .3s,transform 1s ease .3s;display:none}
+.mc.vis{opacity:1;transform:translateY(0);display:block}
+.fnav{position:fixed;top:1.2rem;right:1.2rem;display:flex;align-items:center;gap:.6rem;z-index:50}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(140,100,30,.15) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(100,70,20,.08) 0%,transparent 50%)}
+.hlbl{font-size:.62rem;letter-spacing:.4em;color:#c8a96e;margin-bottom:1.5rem;font-weight:300;position:relative;z-index:1}
+.hnames{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,10vw,7rem);font-weight:300;line-height:1;color:#f0e6d0;position:relative;z-index:1;margin-bottom:1.5rem;text-shadow:0 0 60px rgba(200,169,110,.12)}
+.hamp{color:#c8a96e;font-style:italic;padding:0 .25em}
+.hdiv{display:flex;align-items:center;gap:1rem;margin:1.5rem auto;max-width:280px;position:relative;z-index:1}
+.hdline{flex:1;height:1px;background:rgba(200,169,110,.3)}
+.hdgem{color:#c8a96e;font-size:.8rem}
+.hpara{max-width:500px;color:rgba(240,230,208,.62);font-size:.95rem;line-height:1.9;font-weight:300;position:relative;z-index:1;margin-bottom:2.5rem}
+.hbtns{display:flex;flex-wrap:wrap;gap:.85rem;justify-content:center;position:relative;z-index:1}
+.bpri{padding:.85rem 2.2rem;border-radius:3rem;background:linear-gradient(135deg,#c8a96e,#a8833a);color:#0c0800;font-size:.78rem;letter-spacing:.15em;font-family:'Raleway',sans-serif;font-weight:400;border:none;cursor:pointer;transition:all .35s;box-shadow:0 4px 20px rgba(200,169,110,.25)}
+.bpri:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 8px 30px rgba(200,169,110,.4)}
+.bsec{padding:.85rem 2.2rem;border-radius:3rem;border:1px solid rgba(200,169,110,.35);background:transparent;color:#c8a96e;font-size:.78rem;letter-spacing:.15em;font-family:'Raleway',sans-serif;font-weight:300;cursor:pointer;transition:all .35s}
+.bsec:hover{background:rgba(200,169,110,.08);border-color:rgba(200,169,110,.6);transform:translateY(-2px)}
+.shint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(200,169,110,.35);font-size:.58rem;letter-spacing:.4em;display:flex;flex-direction:column;align-items:center;gap:.5rem;z-index:1;animation:bY 2s ease-in-out infinite}
+.sarr{width:1px;height:28px;background:linear-gradient(to bottom,rgba(200,169,110,.5),transparent)}
+@keyframes bY{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* COUNTDOWN */
+.cds{padding:5rem 2rem;text-align:center;border-top:1px solid rgba(200,169,110,.08);position:relative;overflow:hidden}
+.cdbg{position:absolute;inset:0;background:radial-gradient(ellipse 100% 80% at 50% 50%,rgba(120,80,10,.07) 0%,transparent 65%)}
+.cdg{display:flex;gap:1.4rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;position:relative;z-index:1}
+.cdb{width:100px;height:100px;border-radius:1.2rem;border:1px solid rgba(200,169,110,.18);background:rgba(200,169,110,.03);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.3rem;transition:all .3s}
+.cdb:hover{border-color:rgba(200,169,110,.45);background:rgba(200,169,110,.08)}
+.cdn{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:300;color:#c8a96e;line-height:1}
+.cdu{font-size:.5rem;letter-spacing:.2em;color:rgba(200,169,110,.4)}
+
+/* SECTIONS */
+.sec{padding:6rem 2rem;border-top:1px solid rgba(200,169,110,.08)}
+.si{max-width:1100px;margin:0 auto}
+.slbl{font-size:.6rem;letter-spacing:.4em;color:#c8a96e;margin-bottom:1rem;display:block;font-weight:300}
+.stitle{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:300;line-height:1.15;color:#f0e6d0;margin-bottom:1.5rem}
+.spara{color:rgba(240,230,208,.55);line-height:1.9;font-size:.93rem;font-weight:300;max-width:520px}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+@media(max-width:720px){.sgrid{grid-template-columns:1fr;gap:2.5rem}}
+.siw{border-radius:1.5rem;overflow:hidden;border:1px solid rgba(200,169,110,.1);position:relative}
+.siw::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.4) 0%,transparent 50%)}
+.simg{width:100%;height:520px;object-fit:cover;display:block;transition:transform .8s ease}
+.siw:hover .simg{transform:scale(1.04)}
+.dcards{display:flex;flex-direction:column;gap:.9rem;margin-top:1.8rem}
+.dc{border:1px solid rgba(200,169,110,.1);border-radius:1rem;padding:1rem 1.4rem;background:rgba(200,169,110,.025);display:flex;align-items:center;gap:1.1rem;transition:all .3s}
+.dc:hover{border-color:rgba(200,169,110,.28);background:rgba(200,169,110,.065);transform:translateX(4px)}
+.dico{color:#c8a96e;font-size:1.2rem;flex-shrink:0}
+.dlbl{font-size:.6rem;letter-spacing:.2em;color:rgba(200,169,110,.45);margin-bottom:.2rem}
+.dval{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:300;color:#f0e6d0}
+
+/* CALENDAR */
+.cal-wrap{margin-top:2.5rem;border:1px solid rgba(200,169,110,.15);border-radius:1.5rem;overflow:hidden;background:rgba(200,169,110,.02);backdrop-filter:blur(8px)}
+.cal-head{display:flex;align-items:center;justify-content:center;padding:1.2rem 1.5rem;border-bottom:1px solid rgba(200,169,110,.1);gap:.8rem}
+.cal-month{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:#f0e6d0;letter-spacing:.08em}
+.cal-year{font-size:.7rem;letter-spacing:.25em;color:rgba(200,169,110,.5);font-weight:300}
+.cal-grid{padding:1rem 1.2rem 1.4rem;display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.cal-dow{font-size:.58rem;letter-spacing:.1em;color:rgba(200,169,110,.35);text-align:center;padding:.5rem 0;font-weight:300}
+.cal-day{height:36px;display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:300;color:rgba(240,230,208,.25);border-radius:.5rem;transition:all .2s}
+.cal-day.cur{color:rgba(240,230,208,.62)}
+.cal-day.special{background:linear-gradient(135deg,#c8a96e,#a8833a);color:#0c0800!important;font-weight:400;border-radius:.7rem;box-shadow:0 0 18px rgba(200,169,110,.35);animation:hPulse 2s ease-in-out infinite;position:relative}
+@keyframes hPulse{0%,100%{box-shadow:0 0 14px rgba(200,169,110,.3)}50%{box-shadow:0 0 28px rgba(200,169,110,.65)}}
+.cal-day.special::after{content:'♥';position:absolute;top:-9px;right:-4px;font-size:.62rem;color:#e8334a;filter:drop-shadow(0 0 4px rgba(232,51,74,.6));animation:hFloat 2s ease-in-out infinite}
+@keyframes hFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.15)}}
+
+/* VENUE */
+.venue-card{margin-top:2rem;border:1px solid rgba(200,169,110,.18);border-radius:1.5rem;overflow:hidden;background:rgba(200,169,110,.03);max-width:560px;margin-left:auto;margin-right:auto;text-align:left}
+.venue-header{padding:1.5rem 1.8rem;border-bottom:1px solid rgba(200,169,110,.1);display:flex;align-items:center;gap:1rem}
+.venue-icon{font-size:1.6rem}
+.venue-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:#f0e6d0}
+.venue-type{font-size:.62rem;letter-spacing:.25em;color:rgba(200,169,110,.45);margin-top:.2rem}
+.venue-addr{padding:1.2rem 1.8rem;border-bottom:1px solid rgba(200,169,110,.08)}
+.venue-addr p{font-size:.88rem;color:rgba(240,230,208,.55);line-height:1.7;font-weight:300}
+.venue-map-btn{display:flex;align-items:center;justify-content:center;gap:.6rem;padding:1.1rem;background:rgba(200,169,110,.05);color:#c8a96e;font-size:.75rem;letter-spacing:.18em;font-family:'Raleway',sans-serif;font-weight:300;text-decoration:none;transition:all .3s;width:100%}
+.venue-map-btn:hover{background:rgba(200,169,110,.12);letter-spacing:.22em}
+
+/* GALLERY */
+.gg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:2.5rem}
+@media(max-width:580px){.gg{grid-template-columns:1fr}}
+.gi{border-radius:1.5rem;overflow:hidden;border:1px solid rgba(200,169,110,.08)}
+.gimg{width:100%;height:380px;object-fit:cover;display:block;transition:transform .8s ease}
+.gi:hover .gimg{transform:scale(1.06)}
+
+/* WISH */
+.wish-sec{padding:7rem 2rem;border-top:1px solid rgba(200,169,110,.08);text-align:center;position:relative;overflow:hidden}
+.wish-bg{position:absolute;inset:0;background:radial-gradient(ellipse 90% 70% at 50% 50%,rgba(120,80,10,.06) 0%,transparent 65%)}
+.wish-inner{max-width:640px;margin:0 auto;position:relative;z-index:1}
+.wish-ornament{display:flex;align-items:center;gap:1.2rem;margin:0 auto 2.5rem;max-width:300px}
+.wish-oline{flex:1;height:1px;background:rgba(200,169,110,.25)}
+.wish-ogem{color:#c8a96e;font-size:1rem}
+.wish-family{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:300;color:#c8a96e;margin-bottom:1.8rem;font-style:italic}
+.wish-text{color:rgba(240,230,208,.6);line-height:2;font-size:.95rem;font-weight:300;max-width:500px;margin:0 auto 1.5rem}
+.wish-closing{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:300;color:rgba(200,169,110,.6);font-style:italic}
+.wish-divider{width:40px;height:1px;background:rgba(200,169,110,.25);margin:1.5rem auto}
+
+/* FOOTER */
+.ft{padding:3.5rem 2rem;border-top:1px solid rgba(200,169,110,.08);text-align:center}
+.fnames{font-family:'Cormorant Garamond',serif;font-size:2.3rem;font-weight:300;color:#f0e6d0;margin-bottom:.4rem}
+.ftag{font-size:.65rem;letter-spacing:.3em;color:rgba(200,169,110,.38);font-weight:300}
+.fline{width:55px;height:1px;background:rgba(200,169,110,.22);margin:1.4rem auto}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .85s ease,transform .85s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.22s}.rv.d3{transition-delay:.34s}
+</style>
+</head>
+<body>
+<div class="wr" id="app">
+
+  <!-- LOCK SCREEN -->
+  <div class="ls" id="lockscreen">
+    <div class="lp"></div>
+    <div class="lctrl">
+      <div class="ltg">
+        <button class="lbtn on" id="lbtn-uz" onclick="setLang('uz')">UZ</button>
+        <button class="lbtn" id="lbtn-ru" onclick="setLang('ru')">RU</button>
+      </div>
+    </div>
+    <div class="lc">
+      <div class="lline"></div>
+      <div class="lgem"></div>
+      <h1 class="ltitle" id="lock-title"></h1>
+      <button class="lockbtn" onclick="openInvite()">🔒</button>
+      <p class="lhint" id="lock-hint"></p>
+    </div>
+  </div>
+
+  <!-- AUDIO -->
+  <audio id="bg-music" loop>
+    <source src="Love_Story_Orchestra_version_Indila_slowed,_reverb,_10_min.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- MAIN CONTENT -->
+  <div class="mc" id="main-content">
+    <div class="fnav">
+      <div class="ltg">
+        <button class="lbtn on" id="mbtn-uz" onclick="setLang('uz')">UZ</button>
+        <button class="lbtn" id="mbtn-ru" onclick="setLang('ru')">RU</button>
+      </div>
+      <button class="cbtn" id="music-toggle" onclick="toggleMusic()">🔊</button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hbg"></div>
+      <p class="hlbl rv" id="h-subtitle"></p>
+      <h1 class="hnames rv d1">Bexruz <span class="hamp">&amp;</span> Sabina</h1>
+      <div class="hdiv rv d2"><div class="hdline"></div><span class="hdgem">✦</span><div class="hdline"></div></div>
+      <p class="hpara rv d2" id="h-para"></p>
+      <div class="hbtns rv d3">
+        <button class="bpri" id="h-btn1" onclick="document.getElementById('story-sec').scrollIntoView({behavior:'smooth'})"></button>
+        <button class="bsec" id="h-btn2" onclick="document.getElementById('venue-sec').scrollIntoView({behavior:'smooth'})"></button>
+      </div>
+      <div class="shint"><span id="h-scroll"></span><div class="sarr"></div></div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="cds">
+      <div class="cdbg"></div>
+      <p class="slbl rv" id="cd-label" style="text-align:center"></p>
+      <div class="cdg rv d1">
+        <div class="cdb"><span class="cdn" id="cd-d">00</span><span class="cdu" id="cd-dl"></span></div>
+        <div class="cdb"><span class="cdn" id="cd-h">00</span><span class="cdu" id="cd-hl"></span></div>
+        <div class="cdb"><span class="cdn" id="cd-m">00</span><span class="cdu" id="cd-ml"></span></div>
+        <div class="cdb"><span class="cdn" id="cd-s">00</span><span class="cdu" id="cd-sl"></span></div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="sec" id="story-sec">
+      <div class="si sgrid">
+        <div class="siw rv">
+          <img class="simg" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop" alt="Wedding couple" loading="lazy">
+        </div>
+        <div class="rv d1">
+          <span class="slbl" id="s-label"></span>
+          <h2 class="stitle" id="s-title"></h2>
+          <p class="spara" id="s-para"></p>
+          <div class="dcards">
+            <div class="dc"><span class="dico">📅</span><div><p class="dlbl" id="d-datelbl"></p><p class="dval" id="d-dateval"></p></div></div>
+            <div class="dc"><span class="dico">🕕</span><div><p class="dlbl" id="d-timelbl"></p><p class="dval" id="d-timeval"></p></div></div>
+          </div>
+          <!-- CALENDAR -->
+          <div class="cal-wrap rv d2" id="cal-container"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="sec" id="venue-sec">
+      <div class="si" style="text-align:center">
+        <span class="slbl rv" id="v-label"></span>
+        <h2 class="stitle rv d1" id="v-title"></h2>
+        <p class="spara rv d2" id="v-para" style="max-width:460px;margin:0 auto"></p>
+        <div class="venue-card rv d2">
+          <div class="venue-header">
+            <span class="venue-icon">🏛️</span>
+            <div>
+              <p class="venue-name" id="v-name"></p>
+              <p class="venue-type" id="v-type"></p>
+            </div>
+          </div>
+          <div class="venue-addr"><p id="v-addr"></p></div>
+          <a class="venue-map-btn" href="https://maps.app.goo.gl/H9dH89mo74Rq1UXJ9" target="_blank" rel="noopener">
+            <span>📍</span><span id="v-mapbtn"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="sec">
+      <div class="si">
+        <div style="text-align:center">
+          <span class="slbl rv" id="g-label"></span>
+          <h2 class="stitle rv d1" id="g-title" style="text-align:center"></h2>
+        </div>
+        <div class="gg">
+          <div class="gi rv d1"><img class="gimg" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy"></div>
+          <div class="gi rv d2"><img class="gimg" src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy"></div>
+          <div class="gi rv d3"><img class="gimg" src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop" alt="" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISH -->
+    <section class="wish-sec">
+      <div class="wish-bg"></div>
+      <div class="wish-inner">
+        <div class="wish-ornament rv"><div class="wish-oline"></div><span class="wish-ogem">✦</span><div class="wish-oline"></div></div>
+        <p class="slbl rv" id="w-label" style="text-align:center;margin-bottom:.8rem"></p>
+        <p class="wish-family rv d1" id="w-family"></p>
+        <div class="wish-divider rv d1"></div>
+        <p class="wish-text rv d2" id="w-text"></p>
+        <p class="wish-closing rv d3" id="w-closing"></p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="ft">
+      <div class="fline"></div>
+      <p class="fnames">Bexruz &amp; Sabina</p>
+      <p class="ftag" id="ft-tag"></p>
+      <div class="fline"></div>
+    </footer>
+  </div><!-- /main -->
+
+</div><!-- /app -->
+
+<script>
+const TR={
+  uz:{
+    incoming:"SIZGA TAKLIFNOMA KELDI",
+    openHint:"Qulfni bosib taklifnomani oching",
+    subtitle:"TO'Y TAKLIFNOMASI",
+    heroPara:"Sizni hayotimizdagi eng unutilmas kunda biz bilan birga bo'lishga taklif qilamiz.",
+    btn1:"Taklifnomani Ko'rish",btn2:"Lokatsiya",
+    ourDay:"Bizning Kun",
+    heroTagline:"Sevgi bilan boshlanadigan yangi hayot",
+    heroPara2:"Ushbu quvonchli kunimizda sizni ko'rish biz uchun katta baxt. Yaqinlarimiz bilan birga ushbu go'zal lahzalarni nishonlashni istaymiz.",
+    date:"Sana",dateVal:"20 Iyun 2026, Shanba",
+    time:"Boshlanish vaqti",timeVal:"18:00",
+    photosLabel:"Fotolar",photosTitle:"Bizning lahzalarimiz",
+    locationLabel:"To'yxona",locationTitle:"Sizni kutamiz",
+    locationPara:"To'y marosimi quyidagi manzilda bo'lib o'tadi. Sizning tashrifingiz biz uchun juda muhim.",
+    countdownLabel:"To'yga qolgan vaqt",
+    days:"KUN",hours:"SOAT",minutes:"DAQIQA",seconds:"SONIYA",
+    scrollDown:"PASTGA",
+    footerTag:"20 Iyun 2026 — Toshkent",
+    venueType:"TANTANALI MAROSIM",
+    venueName:"Zuhriniso to'yxonasi",
+    venueAddr:"Toshkent tumani, Iqbol mahallasi, THAY Yoqasi ko'chasi, 64",
+    mapBtn:"XARITADA KO'RISH",
+    wishLabel:"SAMIMIY TILAK",
+    wishFamily:"Hurmat bilan: O'rinovlar oilasi",
+    wishText:"Gulday ochilgan bu baxt kunida siz bilan birga bo'lishni istardik.\n\nKelishingizni intiqlik bilan kutamiz.",
+    wishClosing:"Kelishingiz bizga ulkan quvonch bag\u2018ishlaydi",
+    calMonth:"Iyun",
+    calDows:["Du","Se","Ch","Pa","Ju","Sh","Ya"]
+  },
+  ru:{
+    incoming:"ВАМ ПРИШЛО ПРИГЛАШЕНИЕ",
+    openHint:"Нажмите на замок, чтобы открыть приглашение",
+    subtitle:"СВАДЕБНОЕ ПРИГЛАШЕНИЕ",
+    heroPara:"Приглашаем вас разделить с нами самый незабываемый день нашей жизни.",
+    btn1:"Открыть Приглашение",btn2:"Локация",
+    ourDay:"Наш День",
+    heroTagline:"Новая жизнь, начинающаяся с любви",
+    heroPara2:"Видеть вас в этот радостный день — большое счастье для нас. Мы хотим отметить эти прекрасные моменты вместе с нашими близкими.",
+    date:"Дата",dateVal:"20 Июня 2026, Суббота",
+    time:"Начало в",timeVal:"18:00",
+    photosLabel:"Фото",photosTitle:"Наши моменты",
+    locationLabel:"Тойхона",locationTitle:"Мы вас ждём",
+    locationPara:"Торжество пройдёт по адресу ниже. Ваш визит очень важен для нас.",
+    countdownLabel:"До свадьбы осталось",
+    days:"ДНЕЙ",hours:"ЧАСОВ",minutes:"МИНУТ",seconds:"СЕКУНД",
+    scrollDown:"ВНИЗ",
+    footerTag:"20 Июня 2026 — Ташкент",
+    venueType:"ТОРЖЕСТВЕННАЯ ЦЕРЕМОНИЯ",
+    venueName:"Тойхона Зухринисо",
+    venueAddr:"Ташкентский район, махаллинский сход граждан Икбол, улица ТХАЙ Ёкаси, 64",
+    mapBtn:"ОТКРЫТЬ НА КАРТЕ",
+    wishLabel:"ИСКРЕННЕЕ ПОЖЕЛАНИЕ",
+    wishFamily:"С уважением: Семья Ориновых",
+    wishText:"В этот день расцветшего счастья мы хотели бы быть рядом с вами.\n\nЖдём вашего прихода с нетерпением.",
+    wishClosing:"Ваш приход подарит нам огромную радость",
+    calMonth:"Июнь",
+    calDows:["Пн","Вт","Ср","Чт","Пт","Сб","Вс"]
+  }
+};
+
+let lang='uz', cdTimer=null;
+function t(){return TR[lang]}
+function pad(n){return String(n??0).padStart(2,'0')}
+
+function getCountdown(){
+  const diff=new Date('2026-06-20T18:00:00')-new Date();
+  if(diff<=0)return{d:0,h:0,m:0,s:0};
+  return{d:Math.floor(diff/86400000),h:Math.floor((diff%86400000)/3600000),m:Math.floor((diff%3600000)/60000),s:Math.floor((diff%60000)/1000)};
+}
+
+function updateCountdown(){
+  const {d,h,m,s}=getCountdown();
+  [['cd-d',d],['cd-h',h],['cd-m',m],['cd-s',s]].forEach(([id,v])=>{
+    const el=document.getElementById(id);if(el)el.textContent=pad(v);
+  });
+}
+
+function buildCalendar(){
+  const year=2026,month=5;
+  const firstDay=new Date(year,month,1).getDay();
+  const startOffset=(firstDay+6)%7;
+  const daysInMonth=new Date(year,month+1,0).getDate();
+  const daysInPrev=new Date(year,month,0).getDate();
+  const dows=t().calDows;
+  let html=`<div class="cal-head"><span class="cal-month">${t().calMonth}</span><span class="cal-year">2026</span></div><div class="cal-grid">`;
+  dows.forEach(d=>html+=`<div class="cal-dow">${d}</div>`);
+  for(let i=startOffset-1;i>=0;i--) html+=`<div class="cal-day">${daysInPrev-i}</div>`;
+  for(let d=1;d<=daysInMonth;d++){
+    const sp=d===20?' special':'';
+    html+=`<div class="cal-day cur${sp}">${d}</div>`;
+  }
+  const total=startOffset+daysInMonth;
+  const rem=total%7===0?0:7-(total%7);
+  for(let d=1;d<=rem;d++) html+=`<div class="cal-day">${d}</div>`;
+  html+=`</div>`;
+  return html;
+}
+
+function applyLang(){
+  const l=t();
+  // lock
+  document.getElementById('lock-title').innerHTML=l.incoming.split(' ').map(w=>`<span>${w}<br></span>`).join('');
+  document.getElementById('lock-hint').textContent=l.openHint;
+  // hero
+  document.getElementById('h-subtitle').textContent=l.subtitle;
+  document.getElementById('h-para').textContent=l.heroPara;
+  document.getElementById('h-btn1').textContent=l.btn1;
+  document.getElementById('h-btn2').textContent=l.btn2;
+  document.getElementById('h-scroll').textContent=l.scrollDown;
+  // countdown
+  document.getElementById('cd-label').textContent=l.countdownLabel;
+  document.getElementById('cd-dl').textContent=l.days;
+  document.getElementById('cd-hl').textContent=l.hours;
+  document.getElementById('cd-ml').textContent=l.minutes;
+  document.getElementById('cd-sl').textContent=l.seconds;
+  // story
+  document.getElementById('s-label').textContent=l.ourDay;
+  document.getElementById('s-title').textContent=l.heroTagline;
+  document.getElementById('s-para').textContent=l.heroPara2;
+  document.getElementById('d-datelbl').textContent=l.date;
+  document.getElementById('d-dateval').textContent=l.dateVal;
+  document.getElementById('d-timelbl').textContent=l.time;
+  document.getElementById('d-timeval').textContent=l.timeVal;
+  // calendar
+  document.getElementById('cal-container').innerHTML=buildCalendar();
+  // venue
+  document.getElementById('v-label').textContent=l.locationLabel;
+  document.getElementById('v-title').textContent=l.locationTitle;
+  document.getElementById('v-para').textContent=l.locationPara;
+  document.getElementById('v-name').textContent=l.venueName;
+  document.getElementById('v-type').textContent=l.venueType;
+  document.getElementById('v-addr').textContent=l.venueAddr;
+  document.getElementById('v-mapbtn').textContent=l.mapBtn;
+  // gallery
+  document.getElementById('g-label').textContent=l.photosLabel;
+  document.getElementById('g-title').textContent=l.photosTitle;
+  // wish
+  document.getElementById('w-label').textContent=l.wishLabel;
+  document.getElementById('w-family').textContent=l.wishFamily;
+  document.getElementById('w-text').innerHTML=l.wishText.replace(/\n/g,'<br>');
+  document.getElementById('w-closing').textContent='— '+l.wishClosing+' —';
+  // footer
+  document.getElementById('ft-tag').textContent=l.footerTag;
+  // lang buttons
+  ['lbtn-uz','lbtn-ru','mbtn-uz','mbtn-ru'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(!el)return;
+    el.classList.toggle('on', id.endsWith(lang));
+  });
+}
+
+function setLang(l){lang=l;applyLang();}
+
+function reveal(){
+  const els=document.querySelectorAll('.rv:not(.on)');
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})
+  },{threshold:.1});
+  els.forEach(el=>io.observe(el));
+}
+
+function openInvite(){
+  const ls=document.getElementById('lockscreen');
+  ls.classList.add('out');
+  setTimeout(()=>{
+    ls.style.display='none';
+    const mc=document.getElementById('main-content');
+    mc.classList.add('vis');
+    if(cdTimer)clearInterval(cdTimer);
+    updateCountdown();
+    cdTimer=setInterval(updateCountdown,1000);
+    setTimeout(reveal,150);
+    
+    // Play music
+    const music = document.getElementById('bg-music');
+    if (music) {
+      music.volume = 0.2;
+      music.play().catch(e => console.log("Audio play blocked", e));
+    }
+  },1350);
+}
+
+function toggleMusic() {
+  const music = document.getElementById('bg-music');
+  const btn = document.getElementById('music-toggle');
+  if (music.paused) {
+    music.play();
+    btn.textContent = '🔊';
+  } else {
+    music.pause();
+    btn.textContent = '🔇';
+  }
+}
+
+// init
+applyLang();
+updateCountdown();
+</script>
+</body>
+</html>
