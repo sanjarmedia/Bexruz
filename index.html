@@ -173,9 +173,7 @@ body{background:#080808;min-height:100%}
   </div>
 
   <!-- AUDIO -->
-  <audio id="bg-music" loop preload="auto">
-    <source src="bg-music.mp3" type="audio/mpeg">
-  </audio>
+  <audio id="bg-music" loop preload="auto" src="bg-music.mp3"></audio>
 
   <!-- MAIN CONTENT -->
   <div class="mc" id="main-content">
@@ -458,11 +456,11 @@ function reveal(){
 }
 
 function openInvite(){
-  // Play music immediately on user interaction
+  // Increase volume on unlock
   const music = document.getElementById('bg-music');
   if (music) {
-    music.volume = 0.2;
-    music.play().catch(e => console.log("Audio play blocked", e));
+    music.volume = 0.4;
+    if (music.paused) music.play().catch(() => {});
   }
 
   const ls=document.getElementById('lockscreen');
@@ -490,9 +488,30 @@ function toggleMusic() {
   }
 }
 
+// Auto-play attempt on load and first click
+function initMusic() {
+  const music = document.getElementById('bg-music');
+  if (!music) return;
+  music.volume = 0.15;
+  
+  const startMusic = () => {
+    music.play().then(() => {
+      document.removeEventListener('click', startMusic);
+      document.removeEventListener('touchstart', startMusic);
+    }).catch(() => {});
+  };
+
+  document.addEventListener('click', startMusic);
+  document.addEventListener('touchstart', startMusic);
+  
+  // Try autoplay immediately (might be blocked)
+  music.play().catch(() => {});
+}
+
 // init
 applyLang();
 updateCountdown();
+initMusic();
 </script>
 </body>
 </html>
